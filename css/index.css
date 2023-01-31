@@ -170,3 +170,182 @@ body{
     margin-bottom: 3%;
   }
   
+
+@media screen and (max-width: 1000px) {
+
+    body{
+      padding: 0%;
+      margin:0%;
+  }
+  
+  #banner_container{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 18%, rgba(9,9,121,1) 73%, rgba(1,0,255,1) 99%);
+      width: 100%;
+      height: 250px;
+      position: relative;
+      display: inline-block;
+      text-align: center;
+  }
+  
+  .banner_file{
+      position: absolute;
+      color: white;
+  }
+  #text1{
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  #text2{
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+     
+  }
+  
+  #about_me_container{
+      background-color:white;
+      margin-top: 2%;
+      padding: 1%;
+      margin-left: 5%;
+      margin-right: 5%;
+      border-radius: 16px;
+      display: inline-block;
+      width: 90%;
+      justify-content: center;
+      text-align: center;
+  }
+  #my_information_container{
+      background-color: white;
+      padding: 1%;
+  }
+  
+  #my_photo{
+      margin: 0 auto;
+      
+  }
+  
+  #proyects_title{
+      text-align: center;
+  }
+  
+  #proyectos_container{
+      height: 100%;
+      background-color: white;
+      margin-top: 15px;
+      padding: 1%;
+  }
+  #proyects_card{
+      padding: 1%;
+      background-color: white;
+      width: 100%;
+      height: 70%;
+      display:inline-block;
+      justify-content: center;
+  }
+  
+  .cards{
+      display: inline-flex;
+      width: 100%;
+      background-color: whitesmoke;
+      padding: 2%;
+      margin-top: 0px;
+      margin-right: 5px;
+      margin-left: 5px;
+      margin-bottom: 5%;
+      border-radius: 16px;
+  }
+  
+  .img_card{
+      width: 0px;
+  }
+  
+  .card-body{
+      margin-left: 10px;
+  }
+  .cards a{
+    background-color:  rgba(9,9,121,1);
+    border-color: transparent;
+  }
+  
+  #sliders_containers{
+      background-color: rebeccapurple;
+      padding: 1%;
+  }
+  
+  #my_skills_title{
+      text-align: center;
+      margin-top: 5%;
+      margin-bottom: 3%;
+  }
+  @-webkit-keyframes scroll {
+      0% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+      }
+      100% {
+        -webkit-transform: translateX(calc(-250px * 7));
+                transform: translateX(calc(-250px * 7));
+      }
+    }
+    
+    @keyframes scroll {
+      0% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+      }
+      100% {
+        -webkit-transform: translateX(calc(-250px * 7));
+                transform: translateX(calc(-250px * 7));
+      }
+    }
+    .slider {
+      background: whitesmoke;
+      /*box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);*/
+      height: 100px;
+      margin: auto;
+      overflow: hidden;
+      position: relative;
+      width: 95%;
+    }
+    .slider::before, .slider::after {
+      background: linear-gradient(to right, whitesmoke 0%, rgba(255, 255, 255, 0) 100%);
+      content: "";
+      height: 100px;
+      position: absolute;
+      width: 200px;
+      z-index: 2;
+    }
+    .slider::after {
+      right: 0;
+      top: 0;
+      -webkit-transform: rotateZ(180deg);
+              transform: rotateZ(180deg);
+    }
+    .slider::before {
+      left: 0;
+      top: 0;
+    }
+    .slider .slide-track {
+      -webkit-animation: scroll 40s linear infinite;
+              animation: scroll 40s linear infinite;
+      display: flex;
+      width: calc(250px * 14);
+    }
+    .slider .slide {
+      height: 50px;
+      width: 250px;
+    }
+    
+  
+    #contact_container{
+      width: 100%;
+      height: 150px;
+      background-color: white;
+      text-align: center;
+      border-radius: 16px;
+      padding: 1%;
+      margin-bottom: 3%;
+    }
+    
+}
