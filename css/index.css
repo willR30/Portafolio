@@ -4,19 +4,14 @@ body{
 }
 
 #banner_container{
-    background-color: gray;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 18%, rgba(9,9,121,1) 73%, rgba(1,0,255,1) 99%);
     width: 100%;
-    height: 50%;
+    height: 250px;
     position: relative;
     display: inline-block;
     text-align: center;
 }
-#img_banner{
-    width: 100%;
-    height: 200px;
-    position: relative;
-    filter: blur(4px);
-}
+
 .banner_file{
     position: absolute;
     color: white;
@@ -38,6 +33,9 @@ body{
     margin-top: 2%;
     display: inline-flex;
     padding: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 16px;
 }
 #my_information_container{
     background-color: white;
@@ -57,6 +55,8 @@ body{
 #proyectos_container{
     height: 100%;
     background-color: white;
+    margin-top: 15px;
+    padding: 1%;
 }
 #proyects_card{
     padding: 1%;
@@ -84,6 +84,10 @@ body{
 
 .card-body{
     margin-left: 10px;
+}
+.cards a{
+  background-color:  rgba(9,9,121,1);
+  border-color: transparent;
 }
 
 #sliders_containers{
@@ -118,7 +122,7 @@ body{
     }
   }
   .slider {
-    background: white;
+    background: whitesmoke;
     /*box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);*/
     height: 100px;
     margin: auto;
@@ -127,7 +131,7 @@ body{
     width: 95%;
   }
   .slider::before, .slider::after {
-    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, whitesmoke 0%, rgba(255, 255, 255, 0) 100%);
     content: "";
     height: 100px;
     position: absolute;
@@ -155,4 +159,14 @@ body{
     width: 250px;
   }
   
+
+  #contact_container{
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    text-align: center;
+    border-radius: 16px;
+    padding: 1%;
+    margin-bottom: 3%;
+  }
   
