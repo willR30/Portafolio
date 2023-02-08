@@ -1,21 +1,31 @@
+:root{
+  --backgroundColor:#1b1c1e;
+  --cardColor: #252525;
+  --greenPrimaryColor:#EFBA34;
+  --skyBluPrimaryColor: #4799F0;
+  --bluPrimaryColor: #292CE0;
+  --borderShadowColor: black;
+}
 body{
     padding: 0%;
     margin:0%;
+    background-color: var(--backgroundColor);
+    
 }
 
 #banner_container{
  /* background: linear-gradient(90deg, rgba(2,0,36,1) 18%, rgba(9,9,121,1) 73%, rgba(1,0,255,1) 99%);*/
-    background-color: #2B2986;
+    background-color: var(--backgroundColor);
     width: 100%;
     height: 250px;
     position: relative;
     display: inline-block;
     text-align: center;
 }
-
+/*Texto dentro del banner principal*/
 .banner_file{
     position: absolute;
-    color: white;
+    color: var(--skyBluPrimaryColor);
 }
 #text1{
   top: 40%;
@@ -25,7 +35,7 @@ body{
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
-  border-right: 0.30em solid white;
+  border-right: 0.30em solid var(--backgroundColor);
   animation: typing 3s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
 }
 @keyframes typing {
@@ -33,7 +43,7 @@ body{
     width: 0;
   }
   to {
-    width: 70%;
+    width: 30%;
   }
 }
 @keyframes blink {
@@ -42,7 +52,6 @@ body{
   }
 }
 
-
 #text2{
     top: 60%;
     left: 50%;
@@ -50,7 +59,7 @@ body{
 }
 
 #about_me_container{
-    background-color:white;
+    background-color:var(--cardColor);
     margin-top: 2%;
     display: inline-flex;
     padding: 1%;
@@ -59,29 +68,34 @@ body{
     border-radius: 16px;
 }
 #my_information_container{
-    background-color: white;
+    background-color: transparent;
     padding: 1%;
+}
+
+.myInformationText{
+  color: white;
 }
 
 #my_photo{
     width: 200px;
     border-radius: 50%;
-    border-color: blue;
+    border-color: transparent;
 }
 
 #proyects_title{
     text-align: center;
+    color: var(--skyBluPrimaryColor);
 }
 
 #proyectos_container{
     height: 100%;
-    background-color: white;
+    background-color: var(--backgroundColor);
     margin-top: 15px;
     padding: 1%;
 }
 #proyects_card{
     padding: 1%;
-    background-color: white;
+    background-color:var(--backgroundColor);
     width: 100%;
     height: 70%;
     display: flex;
@@ -91,7 +105,7 @@ body{
 .cards{
     display: inline-flex;
     width: 25%;
-    background-color: whitesmoke;
+    background-color: var(--cardColor);
     padding: 1%;
     margin-top: 0px;
     margin-right: 1%;
@@ -99,10 +113,27 @@ body{
     border-radius: 16px;
 }
 
-.img_card{
-    width: 0px;
+.cards:hover{
+  background-color: var(--skyBluPrimaryColor);
 }
-
+.card-title{
+  color: white;
+}
+.card-text{
+  color: whitesmoke;
+}
+.cardTextContainer{
+  height: 80%;
+}
+.card-body button{
+  background-color: var(--skyBluPrimaryColor);
+  border: none;
+}
+.card-body button:hover{
+  background-color: var(--cardColor);
+  border: none;
+  
+}
 .card-body{
     margin-left: 10px;
 }
@@ -120,6 +151,7 @@ body{
     text-align: center;
     margin-top: 5%;
     margin-bottom: 3%;
+    color: var(--skyBluPrimaryColor);
 }
 @-webkit-keyframes scroll {
     0% {
@@ -143,21 +175,21 @@ body{
     }
   }
   .slider {
-    background: whitesmoke;
-    /*box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);*/
+    background: var(--backgroundColor);
     height: 100px;
     margin: auto;
     overflow: hidden;
     position: relative;
-    width: 95%;
+    width: 100%;
   }
   .slider::before, .slider::after {
-    background: linear-gradient(to right, whitesmoke 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, black 0%, var(--backgroundColor) 100%);
     content: "";
     height: 100px;
     position: absolute;
-    width: 200px;
+    width: 50px;
     z-index: 2;
+    box-shadow: 1px 1px 10px var(--backgroundColor);
   }
   .slider::after {
     right: 0;
@@ -184,14 +216,52 @@ body{
   #contact_container{
     width: 100%;
     height: 150px;
-    background-color: white;
+    background-color: var(--backgroundColor);
     text-align: center;
     border-radius: 16px;
     padding: 1%;
     margin-bottom: 3%;
   }
   
+  #contact_container h5{
+    color: white;
+  }
+  .ModalCarousel{
+    background-color: rebeccapurple;
+  }
+  .ModalCarousel img{
+    height: 100%;
+  }
+  .ModalCard-body{
+    padding: 1%;
+    justify-content: center;
+  }
 
+  .ModalCard-title{
+    color: black;
+  }
+  .ModalCard-text{
+    color: black;
+    justify-content: center;
+  }
+
+  .ModalCard-body a{
+    background-color: var(--backgroundColor);
+    color: white;
+    border-color: transparent;
+  }
+
+  .ModalCard-body #myTaskTitle{
+    color: var(--bluPrimaryColor);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  /*Modals Buttons*/
+  .carousel-control-prev{
+    background-color: red;
+    color: #292CE0;
+  }
 @media screen and (max-width: 1000px) {
 
     body{
@@ -201,7 +271,7 @@ body{
   
   #banner_container{
     /*background: linear-gradient(90deg, rgba(2,0,36,1) 18%, rgba(9,9,121,1) 73%, rgba(1,0,255,1) 99%);*/
-    background-color: #2B2986;
+    background-color: var(--backgroundColor);
       width: 100%;
       height: 250px;
       position: relative;
@@ -211,12 +281,20 @@ body{
   
   .banner_file{
       position: absolute;
-      color: white;
+      color: var(--skyBluPrimaryColor);
   }
   #text1{
       top: 20%;
       left: 50%;
       transform: translate(-50%, -50%);
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 80%;
+    }
   }
   #text2{
       top: 60%;
@@ -226,7 +304,6 @@ body{
   }
   
   #about_me_container{
-      background-color:white;
       margin-top: 2%;
       padding: 1%;
       margin-left: 5%;
@@ -237,61 +314,29 @@ body{
       justify-content: center;
       text-align: center;
   }
-  #my_information_container{
-      background-color: white;
-      padding: 1%;
-  }
   
-  #my_photo{
-      margin: 0 auto;
-      
-  }
-  
-  #proyects_title{
-      text-align: center;
-  }
-  
-  #proyectos_container{
-      height: 100%;
-      background-color: white;
-      margin-top: 15px;
-      padding: 1%;
-  }
   #proyects_card{
-      padding: 1%;
-      background-color: white;
-      width: 100%;
-      height: 70%;
       display:inline-block;
       justify-content: center;
+      width: 100%;
   }
   
   .cards{
       display: inline-flex;
       width: 100%;
-      background-color: whitesmoke;
-      padding: 2%;
+      padding: 4%;
       margin-top: 0px;
       margin-right: 5px;
       margin-left: 5px;
       margin-bottom: 5%;
       border-radius: 16px;
   }
-  
-  .img_card{
-      width: 0px;
+  .cardTextContainer{
+    height: 73%;
   }
-  
-  .card-body{
-      margin-left: 10px;
-  }
-  .cards a{
-    background-color:  rgba(9,9,121,1);
-    border-color: transparent;
-  }
-  
+
   #sliders_containers{
-      background-color: rebeccapurple;
+      background-color:transparent;
       padding: 1%;
   }
   
@@ -322,7 +367,7 @@ body{
       }
     }
     .slider {
-      background: whitesmoke;
+     
       /*box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);*/
       height: 100px;
       margin: auto;
@@ -331,11 +376,11 @@ body{
       width: 95%;
     }
     .slider::before, .slider::after {
-      background: linear-gradient(to right, whitesmoke 0%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(to right, transparent 0%, transparent 100%);
       content: "";
       height: 100px;
       position: absolute;
-      width: 200px;
+      width: 100%;
       z-index: 2;
     }
     .slider::after {
@@ -359,15 +404,5 @@ body{
       width: 250px;
     }
     
-  
-    #contact_container{
-      width: 100%;
-      height: 150px;
-      background-color: white;
-      text-align: center;
-      border-radius: 16px;
-      padding: 1%;
-      margin-bottom: 3%;
-    }
     
 }
