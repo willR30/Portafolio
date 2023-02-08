@@ -3,6 +3,7 @@
   --cardColor: #252525;
   --greenPrimaryColor:#EFBA34;
   --skyBluPrimaryColor: #4799F0;
+  --bluPrimaryColor: #292CE0;
   --borderShadowColor: black;
 }
 body{
@@ -34,7 +35,7 @@ body{
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
-  border-right: 0.30em solid var(--skyBluPrimaryColor);
+  border-right: 0.30em solid var(--backgroundColor);
   animation: typing 3s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
 }
 @keyframes typing {
@@ -94,7 +95,7 @@ body{
 }
 #proyects_card{
     padding: 1%;
-    background-color: var(--backgroundColor);
+    background-color:var(--backgroundColor);
     width: 100%;
     height: 70%;
     display: flex;
@@ -111,6 +112,10 @@ body{
     margin-left: 1%;
     border-radius: 16px;
 }
+
+.cards:hover{
+  background-color: var(--skyBluPrimaryColor);
+}
 .card-title{
   color: white;
 }
@@ -123,6 +128,11 @@ body{
 .card-body button{
   background-color: var(--skyBluPrimaryColor);
   border: none;
+}
+.card-body button:hover{
+  background-color: var(--cardColor);
+  border: none;
+  
 }
 .card-body{
     margin-left: 10px;
@@ -222,7 +232,36 @@ body{
   .ModalCarousel img{
     height: 100%;
   }
+  .ModalCard-body{
+    padding: 1%;
+    justify-content: center;
+  }
 
+  .ModalCard-title{
+    color: black;
+  }
+  .ModalCard-text{
+    color: black;
+    justify-content: center;
+  }
+
+  .ModalCard-body a{
+    background-color: var(--backgroundColor);
+    color: white;
+    border-color: transparent;
+  }
+
+  .ModalCard-body #myTaskTitle{
+    color: var(--bluPrimaryColor);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  /*Modals Buttons*/
+  .carousel-control-prev{
+    background-color: red;
+    color: #292CE0;
+  }
 @media screen and (max-width: 1000px) {
 
     body{
@@ -254,7 +293,7 @@ body{
       width: 0;
     }
     to {
-      width: 75%;
+      width: 80%;
     }
   }
   #text2{
