@@ -82,6 +82,10 @@ body{
     border-color: transparent;
 }
 
+#mottoText{
+  font-size: 18px;
+}
+
 #proyects_title{
     text-align: center;
     color: var(--skyBluPrimaryColor);
